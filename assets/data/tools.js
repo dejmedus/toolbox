@@ -28,6 +28,16 @@ export const tools = [
         name: 'Emojis',
         desc: '',
         url: 'https://emojipedia.org'
+    },
+    {
+        name: 'CSS loaders I',
+        desc: '',
+        url: 'https://cssloaders.github.io'
+    },
+    {
+        name: 'CSS loaders II',
+        desc: '',
+        url: 'https://loading.io/css/'
     }
 ]
 
@@ -71,17 +81,6 @@ export const snippets = [
                 <span style={{ whiteSpace: "pre" }} ref={el} />
             )
         }`
-    },
-    {
-        name: 'markdown toggle',
-        desc: '',
-        url: '',
-        code: `<details>
-            <summary>Click to toggle contents of code</summary>
-            \`\`\`
-            CODE!
-                    \`\`\`
-            </details>`
     },
     {
         name: 'gradient colored text',
