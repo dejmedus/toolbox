@@ -38,6 +38,11 @@ export const tools = [
         name: 'CSS loaders II',
         desc: '',
         url: 'https://loading.io/css/'
+    },
+    {
+        name: 'Icons I',
+        desc: '',
+        url: 'https://uxwing.com'
     }
 ]
 
