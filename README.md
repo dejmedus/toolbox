@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+#### Code syntax hightlighting
+
+- [prismjs](https://prismjs.com/index.html)
+- [babel-plugin-prismjs](https://github.com/mAAdhaTTah/babel-plugin-prismjs)
+
 ## Getting Started
 
 First, run the development server:

@@ -1,9 +1,17 @@
+import React, { useEffect } from "react";
+import Prism from "prismjs";
+
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Card from "../components/Card";
 import { tools, snippets } from "../assets/data/tools";
+import Snippet from "../components/Snippet";
 
 export default function Home() {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +21,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Tools 🛠️</h1>
+        <h1>
+          <span>Frontend Tools</span> 🖼️
+        </h1>
         <div className={styles.grid}>
           {tools.map((tool) => {
             return (
@@ -26,14 +36,20 @@ export default function Home() {
             );
           })}
         </div>
-        {/* {snippets.map((snippet: any) => {
-          return (
-            <>
-              <p>{snippet.name}</p>
-              <div className={styles.code}>{snippet.code}</div>
-            </>
-          );
-        })} */}
+        <h1>
+          <span>Code Snippets</span> 📋
+        </h1>
+        <div className={styles.snippets}>
+          {snippets.map((snippet) => {
+            return (
+              <Snippet
+                key={snippet.name}
+                code={snippet.code}
+                lang={snippet.lang}
+              />
+            );
+          })}
+        </div>
       </main>
     </div>
   );
