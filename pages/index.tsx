@@ -3,9 +3,10 @@ import Prism from "prismjs";
 
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Card from "../components/Card";
+import Card from "@/components/Card";
+import Snippet from "@/components/Snippet";
 import { tools, snippets } from "../assets/data/tools";
-import Snippet from "../components/Snippet";
+import Github from "@/images/github";
 
 export default function Home() {
   useEffect(() => {
@@ -15,8 +16,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>tools</title>
-        <meta name="description" content="useful web dev tools" />
+        <title>Tools</title>
+        <meta
+          name="description"
+          content="Useful web development tools and code snippets"
+        />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
@@ -40,10 +44,12 @@ export default function Home() {
           <span>Code Snippets</span> 📋
         </h1>
         <div className={styles.snippets}>
-          {snippets.map((snippet) => {
+          {snippets.map((snippet, index) => {
+            const open = index == 0 ? true : false;
             return (
               <Snippet
-                key={snippet.name}
+                open={open}
+                name={snippet.name}
                 code={snippet.code}
                 lang={snippet.lang}
               />
@@ -51,6 +57,11 @@ export default function Home() {
           })}
         </div>
       </main>
+      <footer className={styles.footer}>
+        <a href="https://github.com/dejmedus/tools">
+          <Github />
+        </a>
+      </footer>
     </div>
   );
 }

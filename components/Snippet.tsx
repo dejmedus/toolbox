@@ -1,16 +1,22 @@
+import styles from "@/styles/Snippet.module.css";
 
 type SnippetProps = {
-    code: string;
-    lang: string
+  code: string;
+  lang: string;
+  name: string;
+  open: boolean;
 };
 
-const Snippet = ({ code, lang }: SnippetProps) => {
-
+const Snippet = ({ name, code, lang, open }: SnippetProps) => {
   return (
-    <pre>
-    {/* <pre className={`line-numbers`}></pre> */}
-      <code className={`language-${lang}`}>{code}</code>
-    </pre>
+    <details className={styles.details} open={open}>
+      <summary className={styles.summary}>{name}</summary>
+      <div>
+        <pre>
+          <code className={`language-${lang}`}>{code}</code>
+        </pre>
+      </div>
+    </details>
   );
 };
 

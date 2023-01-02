@@ -11,12 +11,13 @@
 .main h1 {
   text-align: center;
   font-size: 1.5em;
+  margin: 1em 0;
 }
 .main span {
   background-image: linear-gradient(60deg, #826aed, #4895ef);
   background-clip: text;
   color: transparent;
-  width:fit-content;
+  width: fit-content;
 }
 .grid {
   display: grid;
@@ -25,32 +26,26 @@
   justify-content: center;
 }
 .snippets {
-  border: 1px solid #4896ef9e;
+  /* border: 1px solid #4896ef9e;
   background-color: #4896ef58;
-  border-radius: 12px;
+  border-radius: 12px; */
   padding: 1em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
 }
 
 .footer {
+  margin-top: 4em;
   display: flex;
-  flex: 1;
-  padding: 1rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding: 2em 1em;
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  height: 6px;
 }
-
-@media (prefers-color-scheme: dark) {
-  .footer {
-    border-top: 1px solid #3c3c3c;
-  }
-}
-@media only screen and (max-width: 600px) {
+.footer a:hover {
+  opacity: 60%;
 }
