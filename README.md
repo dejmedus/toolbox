@@ -1,5 +1,6 @@
 
 ### A collection of interesting tools & code snippets
+Convenient links to the frontend tools and assets I use most often.
 
 ### Code syntax hightlighting
 
