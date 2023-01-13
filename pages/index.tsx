@@ -21,7 +21,8 @@ export default function Home() {
           name="description"
           content="Useful web development tools and code snippets"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/flower.png" />
+        <link rel="shortcut icon" href="/flower.png" />
       </Head>
 
       <main className={styles.main}>
