@@ -24,7 +24,6 @@ export const tools = [
     desc: "",
     url: "https://hypercolor.dev",
   },
-
   {
     name: "Google Fonts Finder",
     desc: "",
@@ -39,6 +38,11 @@ export const tools = [
     name: "Emojis",
     desc: "",
     url: "https://emojipedia.org",
+  },
+  {
+    name: "Symbols",
+    desc: "",
+    url: "https://coolsymbol.com",
   },
   {
     name: "CSS loaders I",
