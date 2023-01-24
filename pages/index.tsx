@@ -69,10 +69,8 @@ export default function Home() {
         </h1>
         <div className={styles.snippets}>
           {snippets.map((snippet, index) => {
-            const open = index == 0 ? true : false;
             return (
               <Snippet
-                open={open}
                 name={snippet.name}
                 code={snippet.code}
                 lang={snippet.lang}

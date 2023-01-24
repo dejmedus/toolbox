@@ -1,5 +1,15 @@
 export const snippets = [
   {
+    name: "Toggle details",
+    desc: "",
+    url: "",
+    lang: "html",
+    code: `<details>
+    <summary>Click to toggle contents</summary>
+      contents
+    </details>`,
+  },
+  {
     name: "typed.js",
     desc: "text typing effect",
     url: "https://github.com/mattboldt/typed.js/",
@@ -41,7 +51,7 @@ export const snippets = [
   }`,
   },
   {
-    name: "gradient colored text",
+    name: "Gradient colored text",
     desc: "",
     url: "",
     lang: "css",

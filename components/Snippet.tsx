@@ -4,12 +4,11 @@ type SnippetProps = {
   code: string;
   lang: string;
   name: string;
-  open: boolean;
 };
 
-const Snippet = ({ name, code, lang, open }: SnippetProps) => {
+const Snippet = ({ name, code, lang }: SnippetProps) => {
   return (
-    <details open={open}>
+    <details key={name}>
       <summary className={styles.summary}>{name}</summary>
       <div>
         <pre>
