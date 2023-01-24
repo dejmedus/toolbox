@@ -6,7 +6,7 @@ const Github = () => {
       height="32"
       shape-rendering="geometricPrecision"
       textRendering="geometricPrecision"
-      imagRrendering="optimizeQuality"
+      imageRrendering="optimizeQuality"
       fillRule="evenodd"
       clipRule="evenodd"
       viewBox="0 0 640 640"
