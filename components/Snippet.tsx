@@ -9,7 +9,7 @@ type SnippetProps = {
 
 const Snippet = ({ name, code, lang, open }: SnippetProps) => {
   return (
-    <details className={styles.details} open={open}>
+    <details open={open}>
       <summary className={styles.summary}>{name}</summary>
       <div>
         <pre>
