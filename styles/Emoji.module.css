@@ -1,0 +1,19 @@
+.button {
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  height: 50px;
+  width: 50px;
+  background-color: #eaeaea20;
+  font-size: 2em;
+
+  display: flex;
+  align-items: center;
+  place-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.button:hover {
+  background-color: rgb(220, 220, 220);
+}
