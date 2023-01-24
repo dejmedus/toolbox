@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+
 import Prism from "prismjs";
 
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Card from "@/components/Card";
 import Snippet from "@/components/Snippet";
@@ -9,7 +12,7 @@ import Emoji from "@/components/Emoji";
 import { tools } from "../assets/data/tools";
 import { snippets } from "../assets/data/snippets";
 import { emojis } from "../assets/data/emojis";
-import Github from "@/images/github";
+import Github from "@/images/github.png";
 
 export default function Home() {
   useEffect(() => {
@@ -27,9 +30,15 @@ export default function Home() {
         <link rel="icon" href="/flower.png" />
         <link rel="shortcut icon" href="/flower.png" />
       </Head>
-
+      <nav className={styles.nav}>
+        <Link href="#tools">Tools</Link>
+        <p>✧</p>
+        <Link href="#emojis">Emojis</Link>
+        <p>✧</p>
+        <Link href="#snippets">Snippets</Link>
+      </nav>
       <main className={styles.main}>
-        <h1>
+        <h1 id="tools">
           <span>Frontend Tools</span> 🖼️
         </h1>
         <div className={styles.grid}>
@@ -44,7 +53,7 @@ export default function Home() {
             );
           })}
         </div>
-        <h1>
+        <h1 id="emojis">
           <span>Emojis</span> 🍉
         </h1>
         <div className={styles.emojis}>
@@ -64,7 +73,7 @@ export default function Home() {
             );
           })}
         </div>
-        <h1>
+        <h1 id="snippets">
           <span>Code Snippets</span> 📋
         </h1>
         <div className={styles.snippets}>
@@ -80,9 +89,12 @@ export default function Home() {
         </div>
       </main>
       <footer className={styles.footer}>
-        <a href="https://github.com/dejmedus/tools">
+        {/* <a href="https://github.com/dejmedus/tools">
           <Github />
-        </a>
+        </a> */}
+        <Link href="https://github.com/dejmedus/tools" target="_blank">
+          <Image src={Github} alt="Github" />
+        </Link>
       </footer>
     </div>
   );
