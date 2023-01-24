@@ -25,6 +25,14 @@
   grid-gap: 1em;
   justify-content: center;
 }
+.emojis {
+  padding: 0 2.8em;
+}
+.emojiGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
 .snippets {
   /* border: 1px solid #4896ef9e;
   background-color: #4896ef58;

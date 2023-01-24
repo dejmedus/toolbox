@@ -5,7 +5,10 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Card from "@/components/Card";
 import Snippet from "@/components/Snippet";
-import { tools, snippets } from "../assets/data/tools";
+import Emoji from "@/components/Emoji";
+import { tools } from "../assets/data/tools";
+import { snippets } from "../assets/data/snippets";
+import { emojis } from "../assets/data/emojis";
 import Github from "@/images/github";
 
 export default function Home() {
@@ -38,6 +41,26 @@ export default function Home() {
                 url={tool.url}
                 desc={tool.desc}
               />
+            );
+          })}
+        </div>
+        <h1>
+          <span>Emojis</span> 🍉
+        </h1>
+        <div className={styles.emojis}>
+          {emojis.map((emoji) => {
+            return (
+              <div className={styles.emojiGrid}>
+                {emoji.arr.map((emojiArr) => {
+                  return (
+                    <Emoji
+                      emoji={emojiArr[0]}
+                      name={emojiArr[1]}
+                      unicode={emojiArr[2]}
+                    />
+                  );
+                })}
+              </div>
             );
           })}
         </div>
