@@ -9,6 +9,7 @@ type CardProps = {
 const Card = ({ url, name, desc }: CardProps) => {
   return (
     <a
+      key={name}
       href={url}
       className={styles.card}
       target="_blank"
