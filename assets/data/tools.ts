@@ -64,4 +64,9 @@ export const tools = [
     desc: "",
     url: "https://iconsvg.xyz",
   },
+  {
+    name: "More SVGs",
+    desc: "",
+    url: "https://www.svgrepo.com/",
+  },
 ];
