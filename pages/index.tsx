@@ -89,9 +89,6 @@ export default function Home() {
         </div>
       </main>
       <footer className={styles.footer}>
-        {/* <a href="https://github.com/dejmedus/tools">
-          <Github />
-        </a> */}
         <Link href="https://github.com/dejmedus/tools" target="_blank">
           <Image src={Github} alt="Github" />
         </Link>
