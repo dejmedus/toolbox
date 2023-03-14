@@ -40,11 +40,6 @@ export const tools = [
     url: "https://emojipedia.org",
   },
   {
-    name: "Symbols",
-    desc: "",
-    url: "https://coolsymbol.com",
-  },
-  {
     name: "CSS loaders I",
     desc: "",
     url: "https://cssloaders.github.io",
