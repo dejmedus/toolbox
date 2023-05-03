@@ -1,31 +1,41 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap");
+
+:root {
+  --text: rgb(0, 0, 0);
+  --bg: rgb(255, 255, 255);
+  --grey: rgb(190, 190, 190);
+  --label: black;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter Tight", sans-serif !important;
+}
+*,
+html {
+  scroll-behavior: smooth !important;
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+}
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-*,
-html {
-  scroll-behavior: smooth !important;
-}
-
 @media (prefers-color-scheme: dark) {
+  :root {
+    --text: rgb(255, 255, 255);
+    --bg: rgb(0, 0, 0);
+    --grey: rgb(140, 140, 140);
+    --label: rgb(40, 40, 40);
+  }
   html {
     color-scheme: dark;
-  }
-  body {
-    color: rgb(218, 218, 218);
-    background: black;
   }
 }
