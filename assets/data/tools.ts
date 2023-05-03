@@ -40,12 +40,12 @@ export const tools = [
     url: "https://emojipedia.org",
   },
   {
-    name: "CSS loaders I",
+    name: "Loading Spinners I",
     desc: "",
     url: "https://cssloaders.github.io",
   },
   {
-    name: "CSS loaders II",
+    name: "Loading Spinners II",
     desc: "",
     url: "https://loading.io/css/",
   },
@@ -55,12 +55,12 @@ export const tools = [
     url: "https://uxwing.com",
   },
   {
-    name: "SVGs",
+    name: "SVGs I",
     desc: "",
     url: "https://iconsvg.xyz",
   },
   {
-    name: "More SVGs",
+    name: "SVGs II",
     desc: "",
     url: "https://www.svgrepo.com/",
   },
