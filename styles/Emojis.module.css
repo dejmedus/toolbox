@@ -1,3 +1,11 @@
+.emojis {
+  padding: 0 2.8em;
+}
+.emojiGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
 .button {
   background-color: #eaeaea20;
   border: 1px solid #eaeaea;
@@ -14,10 +22,20 @@
   flex-direction: column;
   text-align: center;
 }
-.button:hover {
-  background-color: rgb(220, 220, 220);
-}
 
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background-color: rgb(220, 220, 220);
+  }
+}
+@media (max-width: 600px) {
+  .emojis {
+    padding: 0 1.2em;
+  }
+  .emojiGrid {
+    gap: 0.8em;
+  }
+}
 @media (prefers-color-scheme: dark) {
   .button {
     border-color: #222;
