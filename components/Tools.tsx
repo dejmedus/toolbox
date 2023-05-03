@@ -15,7 +15,7 @@ export default function Tools() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2>{tool.name}</h2>
+              <h3>{tool.name}</h3>
             </a>
           );
         })}

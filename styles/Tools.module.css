@@ -25,9 +25,9 @@
 .card img {
   align-self: center;
 }
-.card h2 {
-  margin: 1rem 0;
-  font-size: 1rem;
+.card h3 {
+  margin: 1em 0;
+  font-size: 1em;
 }
 
 .card p {
