@@ -1289,7 +1289,7 @@ export const emojisAll = [
     ],
   },
   {
-    cat: "Symbols",
+    cat: "Signs",
     arr: [
       ["🏧", "ATM Sign", "U+1F3E7"],
       ["🚮", "Litter in bin", "U+1F6AE"],
