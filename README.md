@@ -10,6 +10,27 @@ Awesome frontend tools and resources + emojis
 - [prismjs](https://prismjs.com/index.html)
 - [babel-plugin-prismjs](https://github.com/mAAdhaTTah/babel-plugin-prismjs)
 
+### Screenshots
+<details>
+  <summary>Lightmode</summary>
+  
+  ![Tools](https://github.com/dejmedus/toolbox/assets/59973863/2f0ab500-96cf-4d7b-8593-a85a8ba5f184)
+  
+</details>
+<details>
+  <summary>Darkmode</summary>
+  
+  ![Tools-darkmode](https://github.com/dejmedus/toolbox/assets/59973863/cc425fcf-d1a8-4393-bf92-4cc96353f5ca)
+  
+</details>
+<details>
+  <summary>Mobile</summary>
+  
+  ![tools-mobile](https://github.com/dejmedus/toolbox/assets/59973863/3489ba4d-6623-4b18-9513-2da84a43f2ad)
+  
+</details>
+
+
 ### Local Setup
 
 1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) tools
@@ -43,6 +64,3 @@ git checkout -b 'your-branch-name'
 git push origin your-branch-name
 ```
 🎉 Follow the link provided to create a pull request
-
-
-### Screenshots
