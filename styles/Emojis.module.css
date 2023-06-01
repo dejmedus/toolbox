@@ -1,11 +1,32 @@
 .emojis {
   padding: 0 2.8em;
 }
+.emojis h3 {
+  margin: 2.4em 0 1em 0;
+  text-align: center;
+  font-weight: 500;
+}
+.tableOfContents {
+  max-width: 90vw;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+.tableOfContents a {
+  text-decoration: underline;
+}
+.tableOfContents a:hover {
+  color: rgb(93, 93, 93);
+}
 .emojiGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6em;
 }
+.moreButton,
 .button {
   background-color: #eaeaea20;
   border: 1px solid #eaeaea;
@@ -22,8 +43,13 @@
   flex-direction: column;
   text-align: center;
 }
+.moreButton {
+  min-width: 112px !important;
+  font-size: 1.4em;
+}
 
 @media (hover: hover) and (pointer: fine) {
+  .moreButton:hover,
   .button:hover {
     background-color: rgb(220, 220, 220);
   }
@@ -37,10 +63,12 @@
   }
 }
 @media (prefers-color-scheme: dark) {
+  .moreButton,
   .button {
     border-color: #222;
     background-color: rgb(5, 5, 5);
   }
+  .moreButton:hover,
   .button:hover {
     background-color: rgb(61, 61, 61);
   }
