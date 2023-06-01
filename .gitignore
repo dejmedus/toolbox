@@ -19,7 +19,6 @@
 .DS_Store
 *.pem
 /pages/emojiDetails.tsx
-/assets/data/emojisAll.ts
 
 # debug
 npm-debug.log*
