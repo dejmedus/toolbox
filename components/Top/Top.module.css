@@ -1,0 +1,29 @@
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea70;
+  border-radius: 64px;
+  border: none;
+  padding: 1em;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+.top:hover {
+  background-color: #dadada90;
+}
+
+@media (prefers-color-scheme: dark) {
+  .top {
+    background-color: rgb(32, 32, 32, 0.7);
+  }
+  .top:hover {
+    background-color: rgb(43, 43, 43, 0.9);
+  }
+}
+@media (max-width: 600px) {
+  .top {
+    right: 1em;
+  }
+}

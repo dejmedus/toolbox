@@ -3,15 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
-import Tools from "@/components/Tools";
 import Emojis from "@/components/Emojis";
 import Github from "@/images/github.svg";
+import { BackArrowSVG } from "@/images/icons";
+import Top from "@/components/Top/Top";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Tools</title>
+        <title>Emojis</title>
         <meta
           name="description"
           content="Collection of useful frontend web development tools"
@@ -19,20 +20,15 @@ export default function Home() {
         <link rel="icon" href="/flower.png" />
         <link rel="shortcut icon" href="/flower.png" />
       </Head>
-      <nav className={styles.nav}>
-        <Link href="#tools">Tools</Link>
-        <span>✦</span>
-        <Link href="#emojis">Emojis</Link>
+      <nav className={styles.emojisNav}>
+        <Link href="/">
+          <BackArrowSVG />
+        </Link>
       </nav>
       <main className={styles.main}>
-        <Tools />
-        <Emojis full={false} />
+        <Emojis full={true} />
       </main>
-      <footer className={styles.footer}>
-        <Link href="https://github.com/dejmedus/tools" target="_blank">
-          <Image src={Github} alt="Github" /> View Code
-        </Link>
-      </footer>
+      <Top />
     </div>
   );
 }
