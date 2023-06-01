@@ -4,9 +4,8 @@ import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
 import Tools from "@/components/Tools";
-// import Snippets from "@/components/Snippets";
 import Emojis from "@/components/Emojis";
-import Github from "@/images/github.png";
+import Github from "@/images/github.svg";
 
 export default function Home() {
   return (
@@ -24,17 +23,14 @@ export default function Home() {
         <Link href="#tools">Tools</Link>
         <span>✦</span>
         <Link href="#emojis">Emojis</Link>
-        {/* <span>✦</span>
-        <Link href="#snippets">Snippets</Link> */}
       </nav>
       <main className={styles.main}>
         <Tools />
-        <Emojis />
-        {/* <Snippets /> */}
+        <Emojis full={false} />
       </main>
       <footer className={styles.footer}>
         <Link href="https://github.com/dejmedus/tools" target="_blank">
-          <Image src={Github} alt="Github" /> View Source Code
+          <Image src={Github} alt="Github" /> View Code
         </Link>
       </footer>
     </div>
