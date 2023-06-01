@@ -27,17 +27,12 @@ export const tools = [
   {
     name: "Google Fonts Finder",
     desc: "",
-    url: "https://katydecorah.com/font-library/#!/wide",
-  },
-  {
-    name: "NPM Fonts",
-    desc: "",
-    url: "https://fontsource.org/",
+    url: "https://fav-fonts.vercel.app/",
   },
   {
     name: "Emojis",
     desc: "",
-    url: "https://emojipedia.org",
+    url: "/emojis",
   },
   {
     name: "Loading Spinners I",
