@@ -1,26 +1,46 @@
+import { useState } from "react";
 import Link from "next/link";
 import { emojis } from "../assets/data/emojis";
 import { emojisAll } from "../assets/data/emojisAll";
 import styles from "../styles/Emojis.module.css";
 
 export default function Emojis({ full }: { full: boolean }) {
+  const [search, setSearch] = useState<string | null>(null);
   const emojiList = full ? emojisAll : emojis;
   return (
     <>
       {!full ? <h2 id="emojis">Emojis</h2> : null}
       <div className={styles.emojis}>
-        {full ? <TableOfContents emojiList={emojiList} /> : null}
-        {emojiList.map((emoji) => {
+        {full ? (
+          <>
+            <TableOfContents emojiList={emojiList} />
+            <Search setSearch={setSearch} />{" "}
+          </>
+        ) : null}
+        {emojiList.map((emojiArr) => {
+          emojiArr = search
+            ? {
+                cat: emojiArr.cat,
+                arr: emojiArr.arr.filter((a) =>
+                  a[1].toLowerCase().includes(search.toLowerCase())
+                ),
+              }
+            : emojiArr;
+
           return (
             <>
-              {full ? <h3 id={emoji.cat}>{emoji.cat}</h3> : null}
+              {full ? (
+                emojiArr.arr.length > 0 ? (
+                  <h3 id={emojiArr.cat}>{emojiArr.cat}</h3>
+                ) : null
+              ) : null}
               <div className={styles.emojiGrid}>
-                {emoji.arr.map((emojiArr) => {
+                {emojiArr.arr.map((emoji) => {
                   return (
                     <Emoji
-                      emoji={emojiArr[0]}
-                      name={emojiArr[1]}
-                      unicode={emojiArr[2]}
+                      emoji={emoji[0]}
+                      name={emoji[1]}
+                      unicode={emoji[2]}
                     />
                   );
                 })}
@@ -51,9 +71,8 @@ const Emoji = ({ emoji, name, unicode }: IEmoji) => {
       }}
       className={styles.button}
       key={unicode}
-      name={name}
       value={emoji}
-      id={unicode}
+      id={name}
     >
       {emoji}
     </button>
@@ -72,5 +91,19 @@ const TableOfContents = ({ emojiList }: { emojiList: IEmojiCategory[] }) => {
         return <Link href={`#${emoji.cat}`}>{emoji.cat}</Link>;
       })}
     </div>
+  );
+};
+
+const Search = ({ setSearch }: { setSearch: any }) => {
+  return (
+    <input
+      className={styles.search}
+      onChange={(e) => setSearch(e.target.value)}
+      type="text"
+      name="search"
+      id="search"
+      aria-label="search bar"
+      placeholder="Search..."
+    />
   );
 };
