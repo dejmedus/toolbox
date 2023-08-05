@@ -28,7 +28,7 @@ export default function Emojis({ full }: { full: boolean }) {
             : emojiArr;
 
           return (
-            <>
+            <div key={emojiArr.cat}>
               {full ? (
                 emojiArr.arr.length > 0 ? (
                   <h3 id={emojiArr.cat}>{emojiArr.cat}</h3>
@@ -38,6 +38,7 @@ export default function Emojis({ full }: { full: boolean }) {
                 {emojiArr.arr.map((emoji) => {
                   return (
                     <Emoji
+                      key={emoji[1]}
                       emoji={emoji[0]}
                       name={emoji[1]}
                       unicode={emoji[2]}
@@ -50,7 +51,7 @@ export default function Emojis({ full }: { full: boolean }) {
                   </Link>
                 ) : null}
               </div>
-            </>
+            </div>
           );
         })}
       </div>
@@ -70,7 +71,6 @@ const Emoji = ({ emoji, name, unicode }: IEmoji) => {
         navigator.clipboard.writeText(emoji);
       }}
       className={styles.button}
-      key={unicode}
       value={emoji}
       id={name}
     >
@@ -88,7 +88,11 @@ const TableOfContents = ({ emojiList }: { emojiList: IEmojiCategory[] }) => {
   return (
     <div id="tableOfContents" className={styles.tableOfContents}>
       {emojiList.map((emoji) => {
-        return <Link href={`#${emoji.cat}`}>{emoji.cat}</Link>;
+        return (
+          <Link key={emoji.cat} href={`#${emoji.cat}`}>
+            {emoji.cat}
+          </Link>
+        );
       })}
     </div>
   );
