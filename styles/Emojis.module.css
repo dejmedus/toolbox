@@ -74,9 +74,10 @@
   }
 }
 @media (prefers-color-scheme: dark) {
-  .search .moreButton,
+  .search,
+  .moreButton,
   .button {
-    border-color: #222;
+    border: 1px solid #222;
     background-color: rgb(5, 5, 5);
   }
   .moreButton:hover,
