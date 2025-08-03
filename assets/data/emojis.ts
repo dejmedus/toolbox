@@ -50,6 +50,7 @@ export const emojis = [
       ["📙", "Orange book", "U+1F4D9"],
       ["📓", "Notebook", "U+1F4D3"],
       ["📃", "Page with curl", "U+1F4C3"],
+      ["🎩", "Top Hat", "U+1F3A9"],
       ["💡", "Light bulb", "U+1F4A1"],
       ["🖋", "Fountain pen", "U+1F58B"],
       ["🔨", "Hammer", "U+1F528"],
