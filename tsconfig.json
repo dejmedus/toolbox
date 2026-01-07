@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
       "@/styles/*": ["styles/*"],
       "@/images/*": ["assets/images/*"],
-      "@/data/*": ["assets/data/*"],
+      "@/data/*": ["assets/data/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -22,6 +21,13 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "assets/images/github.js", "components", "custom.d.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "assets/images/github.js",
+    "components",
+    "custom.d.ts"
+  ],
   "exclude": ["node_modules"]
 }
